@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'neutratextbook';
+  src: url('NeutraText-Book.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'neutratextbold';
+  src: url('NeutraText-Bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}

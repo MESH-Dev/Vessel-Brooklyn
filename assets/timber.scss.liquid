@@ -130,7 +130,7 @@ $colorDrawerText: #333;
 $drawerTransition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
 
 // Sizing variables
-$siteWidth: 1180px;
+$siteWidth: 100%;
 $gutter: 30px;
 $gridGutter: 30px; // can be a %, but nested grids will have smaller margins because of it
 $radius: 3px;
@@ -1752,7 +1752,7 @@ label.error {
   #Site Header
 ==============================================================================*/
 .site-header {
-  padding: ($gutter / 2) 0;
+  padding: ($gutter) 0;
 
   .grid--table {
     display: table;
@@ -1769,11 +1769,11 @@ label.error {
 
 .site-header__logo {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 20px;
   max-width: 100%;
 
   @include at-query ($min, $large) {
-    text-align: left;
+    text-align: center;
   }
 
   a,
@@ -2526,3 +2526,45 @@ label.error {
 }
 
 {% endif %} // settings.ajax_cart_enable
+
+/*================ Custom CSS ================*/
+
+.index-banner {
+  background: url(//cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg);
+  height: 830px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.index-banner-home {
+  padding-top: 135px;
+  text-align: center;
+}
+
+.index-banner-home-text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 28px;
+  font-family: neutratextbold;
+  width: 300px;
+  margin: 40px auto 0;
+  letter-spacing: 0.08em;
+}
+
+.menu-items {
+  font-family: neutratextbold;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #07141e;
+
+  img {
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .grid__item {
+    padding-left: 0px;
+    text-align: center;
+  }
+}
