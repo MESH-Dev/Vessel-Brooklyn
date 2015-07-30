@@ -141,10 +141,10 @@ $zindexDrawer: 10;
 
 /*================ Typography ================*/
 
-$headerFontStack: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headerFontStack: 'neutratextbook', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $headerFontWeight: 700;
 
-$bodyFontStack: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$bodyFontStack: 'neutratextbook', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $baseFontSize: 14px; // Henseforth known as 1em
 
 @font-face {
@@ -720,7 +720,7 @@ body {
 .main-content {
   display: block;
   margin-top: $gutter;
-  padding-bottom: $gutter * 2;
+  padding: 0;
 }
 
 /*============================================================================
@@ -1713,12 +1713,12 @@ label.error {
   }
 
   .icon {
-    font-size: 30px;
+    font-size: 20px;
     line-height: 26px;
   }
 
   a {
-    color: {{ settings.color_footer_social_link }};
+    color: white;
 
     &:hover {
       color: darken({{ settings.color_footer_social_link }}, 10%);
@@ -1771,6 +1771,7 @@ label.error {
   text-align: center;
   margin: 0 20px;
   max-width: 100%;
+  width: 100%;
 
   @include at-query ($min, $large) {
     text-align: center;
@@ -2166,12 +2167,14 @@ label.error {
   #Site Footer
 ==============================================================================*/
 .site-footer {
-  background-color: $colorFooterBg;
-  padding: $gutter 0;
-  color: $colorFooterText;
+  background: url(//cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg);
+  height: 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: ($gutter/2) 0 0;
 
-  @include at-query ($min, $large) {
-    padding: ($gutter * 2) 0;
+  a {
+    color: white;
   }
 }
 
@@ -2566,5 +2569,185 @@ label.error {
   .grid__item {
     padding-left: 0px;
     text-align: center;
+  }
+}
+
+.products {
+  height: 800px;
+  margin-bottom: 30px;
+}
+
+.products .large--one-sixth {
+  background-repeat: no-repeat;
+  height: 100%;
+}
+.products .large--five-twelfths {
+  background-repeat: no-repeat;
+  background-color: #07262c;
+  height: 100%;
+  display: table;
+  padding: 150px 100px;
+
+  .products-image {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+}
+
+.products-title, .products-description, .products-cta {
+  color: white;
+}
+
+.products-title {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  h2 {
+    font-size: 24px;
+    font-family: neutratextbold;
+  }
+}
+
+.products-description {
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+  }
+}
+
+.products-cta {
+  a {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #07dfd7;
+    font-family: neutratextbold;
+  }
+}
+
+.celebrate {
+  padding: 150px 0;
+}
+
+.celebrate-title {
+  h1 {
+    font-size: 24px;
+    font-family: neutratextbold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #07141e;
+    margin-bottom: 50px;
+  }
+}
+
+.celebrate-image {
+  width: 600px;
+  margin: 0 auto 50px;
+}
+
+.celebrate-text {
+  width: 300px;
+  margin: 0 auto;
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    color: #132129;
+  }
+}
+
+.moments {
+  height: 950px;
+}
+
+.moments-left {
+  background-color: #ffefe7;
+  height: 100%;
+  padding: 150px 100px;
+}
+
+.moments-right {
+  padding-left: 0px;
+}
+
+.moments-image {
+  width: 150px;
+  margin: 0 auto 50px;
+}
+
+.moments-image-top {
+  line-height: 0;
+  height: 475px;
+  background-size: cover;
+}
+
+.moments-image-bottom {
+  height: 475px;
+  background-size: cover;
+}
+
+.moments-title {
+  h2 {
+    font-size: 24px;
+    font-family: neutratextbold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #07141e;
+    margin-bottom: 50px;
+  }
+}
+
+.moments-description {
+  width: 300px;
+  margin: auto;
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    color: #132129;
+  }
+}
+
+.about {
+  padding: 150px 0;
+}
+
+.about-title {
+  h1 {
+    font-size: 24px;
+    font-family: neutratextbold;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #07141e;
+    margin-bottom: 50px;
+  }
+}
+
+.about-image {
+  width: 600px;
+  margin: 0 auto 50px;
+}
+
+.about-text {
+  width: 300px;
+  margin: 0 auto;
+  p {
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: 0.1em;
+    color: #132129;
+  }
+}
+
+.footer-menu {
+  li {
+    a {
+      text-transform: uppercase;
+      font-family: neutratextbold;
+      margin-right: 30px;
+    }
   }
 }
