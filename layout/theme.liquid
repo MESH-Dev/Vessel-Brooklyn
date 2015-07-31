@@ -39,6 +39,8 @@
   {{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
   {{ 'modernizr.min.js' | asset_url | script_tag }}
 
+  {{ 'instafeed.min.js' | asset_url | script_tag }}
+
   {% comment %}
     If you store has customer accounts disabled, you can remove the following JS file
   {% endcomment %}
@@ -47,6 +49,16 @@
   {% endif %}
 
   {{ "font.css"  | asset_url | stylesheet_tag }}
+
+  <script type="text/javascript">
+    var feed = new Instafeed({
+      get: 'user',
+      userId: 199721613,
+      accessToken: '19403516.22cb2c4.afd9be3b43184423b6fdf34cec830bfa',
+      limit: 6
+    });
+    feed.run();
+  </script>
 
 </head>
 

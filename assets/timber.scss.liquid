@@ -797,11 +797,19 @@ h1, h2, h3, h4, h5, h6 {
 
 /*================ Use em() Sass function to declare font-size ================*/
 h1 {
-  font-size: em(36px);
+  font-size: 24px;
+  font-family: neutratextbold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #07141e;
 }
 
 h2 {
-  font-size: em(28px);
+  font-size: 20px;
+  font-family: neutratextbook;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #07141e;
 }
 
 h3 {
@@ -830,6 +838,9 @@ h6 {
 
 p {
   margin: 0 0 ($gutter / 2) 0;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
 
   img {
     margin: 0;
@@ -2600,22 +2611,11 @@ label.error {
 }
 
 .products-title {
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-
-  h2 {
-    font-size: 24px;
-    font-family: neutratextbold;
+  h1 {
+    color: white;
   }
 }
 
-.products-description {
-  p {
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.1em;
-  }
-}
 
 .products-cta {
   a {
@@ -2634,10 +2634,6 @@ label.error {
 
 .celebrate-title {
   h1 {
-    font-size: 24px;
-    font-family: neutratextbold;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     color: #07141e;
     margin-bottom: 50px;
   }
@@ -2652,9 +2648,6 @@ label.error {
   width: 300px;
   margin: 0 auto;
   p {
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.1em;
     color: #132129;
   }
 }
@@ -2690,11 +2683,7 @@ label.error {
 }
 
 .moments-title {
-  h2 {
-    font-size: 24px;
-    font-family: neutratextbold;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
+  h1 {
     color: #07141e;
     margin-bottom: 50px;
   }
@@ -2704,9 +2693,6 @@ label.error {
   width: 300px;
   margin: auto;
   p {
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.1em;
     color: #132129;
   }
 }
@@ -2717,10 +2703,6 @@ label.error {
 
 .about-title {
   h1 {
-    font-size: 24px;
-    font-family: neutratextbold;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
     color: #07141e;
     margin-bottom: 50px;
   }
@@ -2735,9 +2717,6 @@ label.error {
   width: 300px;
   margin: 0 auto;
   p {
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.1em;
     color: #132129;
   }
 }
@@ -2750,4 +2729,85 @@ label.error {
       margin-right: 30px;
     }
   }
+}
+
+.page-banner {
+  h1 {
+    color: white;
+    margin: 15px 0;
+  }
+}
+
+.callout-text-right {
+  padding: 150px 0;
+}
+
+.callout-image {
+  width: 600px;
+  margin: 0 auto 50px;
+}
+
+.callout-text-right .callout-right {
+  padding: 0 100px;
+}
+
+.quote {
+  background-color: #ffefe7;
+  padding: 100px 0;
+}
+
+.quote-content {
+  font-family: neutratextbook;
+  font-size: 38px;
+  line-height: 48px;
+  letter-spacing: 0.07em;
+  margin-bottom: 20px
+}
+
+.quote-attribution {
+  font-size: 24px;
+  font-family: neutratextbold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.callout-text-left {
+  height: 950px;
+}
+
+.callout-image-top {
+  line-height: 0;
+  height: 475px;
+  background-size: cover;
+}
+
+.callout-image-bottom {
+  height: 475px;
+  background-size: cover;
+}
+
+.callout-text-left .callout-left {
+  padding: 150px;
+}
+
+.image {
+  height: 600px;
+}
+
+.social {
+  padding: 100px 0;
+}
+
+#instafeed {
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+#instafeed img {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+#instafeed img:hover {
+  opacity: 0.7;
 }
