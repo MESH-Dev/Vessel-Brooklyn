@@ -6,40 +6,51 @@
 
 {% endcomment %}
 
-{% paginate collection.products by 12 %}
+<!-- /templates/page.liquid -->
+<div class="grid--full" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/header-bg_2048x2048.jpg); background-repeat: no-repeat; background-size: cover;">
 
-{% include 'breadcrumb' %}
+  <div class="grid__item large--two-thirds push--large--one-sixth text-center page-banner">
+
+    <h1>Gifting</h1>
+
+    {% comment %}
+      Regular page content goes here.
+    {% endcomment %}
+
+  </div>
+
+</div>
+
+{% paginate collection.products by 12 %}
 
 {% comment %}
   Use .grid--rev so that the collection tags appear below the products on mobile
 {% endcomment %}
-<div class="grid--rev">
-  <div class="grid__item large--three-quarters">
+<div class="grid shop">
+
+  <div class="grid__item large--one-half" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/setting_2048x2048.jpg)">
+  </div>
+  <div class="grid__item large--one-half">
+    <div class="products-title">
+      <h1>Gifting</h1>
+    </div>
+    <div class="products-description">
+      <p>Donec mollis hendrerit risus. Cras sagittis. Fusce vulputate eleifend sapien. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Pellentesque commodo eros a enim.</p>
+    </div>
+    <div class="products-cta">
+      <a href="">View</a>
+    </div>
+  </div>
+
+</div>
+
+<div class="grid">
+  <div class="grid__item large--three-quarters push--one-eighth">
 
     {% comment %}
       Different markup if a collection description exists
     {% endcomment %}
-    {% if collection.description != blank %}
-      <header class="section-header">
-        <h1 class="section-header__title">{{ collection.title }}</h1>
-        <div class="rte rte--header">
-          {{ collection.description }}
-        </div>
-      </header>
-      <hr>
-      <div class="section-header">
-        <div class="section-header__right">
-          {% include 'collection-sorting' %}
-        </div>
-      </div>
-    {% else %}
-      <header class="section-header">
-        <h1 class="section-header__title section-header__left">{{ collection.title }}</h1>
-        <div class="section-header__right">
-          {% include 'collection-sorting' %}
-        </div>
-      </header>
-    {% endif %}
+
 
     {% comment %}
       Use class grid-uniform to have evenly sized columns clear
@@ -53,7 +64,30 @@
       {% endcomment %}
       {% for product in collection.products %}
 
-        {% include 'product-grid-item' %}
+        {% if forloop.index == 1 or forloop.index == 4 %}
+          <div class="grid">
+        {% endif %}
+
+          {% if forloop.index == 1 or forloop.index == 6 %}
+            <div class="grid__item large--three-quarters">
+              {% include 'product-grid-item' %}
+            </div>
+          {% endif %}
+
+          {% if forloop.index == 2 or forloop.index == 4 %}
+            <div class="grid__item large--one-quarter">
+              {% include 'product-grid-item' %}
+          {% endif %}
+
+          {% if forloop.index == 3 or forloop.index == 5 %}
+              {% include 'product-grid-item' %}
+            </div>
+          {% endif %}
+
+        {% if forloop.index == 3 or forloop.index == 6 %}
+          </div>
+        {% endif %}
+
 
       {% else %}
 
@@ -83,17 +117,18 @@
 
     </div>
 
-    {% if paginate.pages > 1 %}
-      <hr>
-      <div class="pagination">
-        {{ paginate | default_pagination | replace: '&laquo; Previous', '&larr;' | replace: 'Next &raquo;', '&rarr;' }}
-      </div>
-    {% endif %}
-
   </div>
 
-  <div class="grid__item large--one-quarter">
-    {% include 'collection-sidebar' %}
+</div>
+
+<div class="grid--full quote">
+  <div class="grid__item large--one-half push--large--one-quarter text-center">
+    <div class="quote-content">
+      &ldquo;Donec posuere vulputate arcu. Vivamus quis mi.&rdquo;
+    </div>
+    <div class="quote-attribution">
+      S. Quis Neque Mollis
+    </div>
   </div>
 </div>
 

@@ -18,7 +18,7 @@
   Set the default grid_item_width if no variable is set
 {% endcomment %}
 {% unless grid_item_width %}
-  {% assign grid_item_width = 'large--one-third medium--one-half' %}
+  {% assign grid_item_width = 'large--two-thirds medium--one-half' %}
 {% endunless %}
 
 {% comment %}
@@ -37,7 +37,7 @@
   {% assign sold_out = false %}
 {% endif %}
 
-<div class="grid__item {{ grid_item_width }}">
+
 
   {% comment %}
     Link to your product with the 'within: collection' filter for the link to be aware of the collection.
@@ -52,13 +52,14 @@
 
   {% endcomment %}
   <a href="{{ product.url | within: collection }}" class="grid__image">
-    <img src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}">
+    <img src="{{ product.featured_image.src | img_url: 'master' }}" alt="{{ product.featured_image.alt | escape }}">
   </a>
 
-  <p class="h6">
-    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
-  </p>
-  <p>
+<div class="product-item">
+  <div class="product-title">
+    <a href="{{ product.url | within: collection }}">{{ product.title }}</a>&nbsp;-&nbsp;
+  </div>
+  <div class="product-price">
     {% comment %}
       You can show a leading 'from' or 'up to' by checking 'product.price_varies'
       if your variants have different prices.
@@ -86,6 +87,5 @@
       <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
       <br><s>{{ product.compare_at_price | money }}</s>
     {% endif %}
-  </p>
-
+  </div>
 </div>
