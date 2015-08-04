@@ -124,9 +124,9 @@ $successGreenBg: #ecfef0;
 // Drawers
 $drawerNavWidth: 300px;
 $drawerCartWidth: 300px;
-$colorDrawers: #f6f6f6;
-$colorDrawerBorder: darken($colorDrawers, 5%);
-$colorDrawerText: #333;
+$colorDrawers: #07141e;
+$colorDrawerBorder: white;
+$colorDrawerText: white;
 $drawerTransition: all 0.4s cubic-bezier(0.46, 0.01, 0.32, 1);
 
 // Sizing variables
@@ -1780,7 +1780,7 @@ label.error {
 
 .site-header__logo {
   text-align: center;
-  margin: 0 20px;
+  margin: 0;
   max-width: 100%;
   width: 100%;
 
@@ -2109,7 +2109,6 @@ label.error {
 .drawer--right {
   width: $drawerCartWidth;
   right: -$drawerCartWidth;
-  border-left: 1px solid $colorDrawerBorder;
 
   .js-drawer-open-right & {
     display: block;
@@ -2142,7 +2141,6 @@ label.error {
   height: 70px;
   width: 100%;
   margin-bottom: $gutter / 2;
-  border-bottom: 1px solid $colorDrawerBorder;
 }
 
 .drawer__title,
@@ -2153,6 +2151,7 @@ label.error {
 
 .drawer__title {
   width: 100%;
+  letter-spacing: 0.1em;
 }
 
 .drawer__close {
@@ -2437,7 +2436,6 @@ label.error {
 .ajaxcart__row {
   padding-bottom: $gutter / 2;
   margin-bottom: $gutter / 2;
-  border-bottom: 1px solid $colorDrawerBorder;
 }
 
 .ajaxcart__product-image {
@@ -2553,6 +2551,23 @@ label.error {
 .index-banner-home {
   padding-top: 135px;
   text-align: center;
+
+  @include at-query ($max, $small) {
+    display: none;
+  }
+}
+
+.index-mobile-home {
+  padding-top: 90px;
+  text-align: center;
+
+  img {
+    width: 85%;
+  }
+
+  @include at-query ($min, $small) {
+    display: none;
+  }
 }
 
 .index-banner-home-text {
@@ -2911,4 +2926,48 @@ label.error {
   background-color: #1fe2db;
   padding: 10px 0;
   font-size: 24px;
+  border-top: 3px solid #1fe2db;
+
+  &:hover {
+    background-color: #07262c;
+    color: #1fe2db;
+    border-top: 3px solid #1fe2db;
+  }
+}
+
+.subtotal {
+  text-transform: uppercase;
+  font-family: neutratextbold;
+  color: white;
+  font-size: 14px;
+}
+
+.shipping {
+  font-size: 12px;
+}
+
+.ajaxcart__footer {
+  position: absolute;
+  bottom: 60px;
+}
+
+.cart__checkout {
+  width: 300px;
+  margin-left: -15px;
+  border-radius: 0;
+  text-transform: uppercase;
+  color: #07262c;
+  font-family: neutratextbold;
+  letter-spacing: 0.1em;
+  background-color: #1fe2db;
+  padding: 10px 0;
+  font-size: 18px;
+  position: absolute;
+  bottom: 0;
+
+  &:hover {
+    background-color: #07262c;
+    color: #1fe2db;
+    border-top: 3px solid #1fe2db;
+  }
 }

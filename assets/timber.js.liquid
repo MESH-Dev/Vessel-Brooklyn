@@ -441,7 +441,43 @@ timber.Drawers = (function () {
   };
 
   return Drawer;
+
 })();
+
+$(document).ready(function() {
+
+  /*
+
+  $('.menu-gifting').mouseenter(function() {
+    $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/flowers.jpg?14938704169794946651)');
+  }).mouseleave(function() {
+    $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+  });
+
+  */
+
+  $(window).scroll(sticky_relocate);
+
+	var scrolled = true;
+
+	function sticky_relocate() {
+
+		var window_top = $(window).scrollTop();
+		var div_top = $('.site-header').offset().top;
+
+		if (div_top < window_top) {
+
+			if (scrolled) {
+				scrolled = false;
+        $('.index-banner').css('margin-top', -div_top);
+				$('html, body').animate({
+					scrollTop: 0
+				}, 0);
+			}
+		}
+	}
+
+});
 
 // Initialize Timber's JS on docready
 $(timber.init);
