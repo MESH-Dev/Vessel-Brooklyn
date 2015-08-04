@@ -723,6 +723,12 @@ body {
   padding: 0;
 }
 
+.template-index .main-content {
+  @include at-query ($max, $small) {
+    display: none;
+  }
+}
+
 /*============================================================================
   #Helper Classes
 ==============================================================================*/
@@ -838,7 +844,7 @@ h6 {
 
 p {
   margin: 0 0 ($gutter / 2) 0;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.1em;
 
@@ -1185,6 +1191,7 @@ ol.alpha { list-style: lower-alpha outside; }
 
 .inline-list {
   margin-left: 0;
+  display: inline;
 
   li {
     display: inline-block;
@@ -1718,6 +1725,7 @@ label.error {
 .social-icons li {
   margin: 0 ($gutter / 2) ($gutter / 2);
   vertical-align: middle;
+  float: right;
 
   @include at-query ($min, $postSmall) {
     margin-left: 0;
@@ -2546,6 +2554,10 @@ label.error {
   height: 830px;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @include at-query ($max, $small) {
+    height: 500px;
+  }
 }
 
 .index-banner-home {
@@ -2588,6 +2600,11 @@ label.error {
 
   a {
     color: #07141e;
+
+    @include at-query ($max, $medium) {
+      font-size: 10px;
+    }
+
   }
 
   img {
@@ -2604,6 +2621,10 @@ label.error {
 .products {
   height: 800px;
   margin-bottom: 30px;
+
+  @include at-query ($max, $medium) {
+    height: 100%;
+  }
 }
 
 .products .large--one-sixth {
@@ -2616,6 +2637,10 @@ label.error {
   height: 100%;
   display: table;
   padding: 150px 100px;
+
+  @include at-query ($max, $medium) {
+    padding: 75px;
+  }
 
   .products-image {
     display: table-cell;
@@ -2744,7 +2769,7 @@ label.error {
     a {
       text-transform: uppercase;
       font-family: neutratextbold;
-      margin-right: 30px;
+      margin-right: 20px;
     }
   }
 }
@@ -2970,4 +2995,8 @@ label.error {
     color: #1fe2db;
     border-top: 3px solid #1fe2db;
   }
+}
+
+.menu-items a .icon-cart {
+  font-size: 24px;
 }
