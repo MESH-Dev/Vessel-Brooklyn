@@ -13,78 +13,177 @@
 
 </div>
 
-<div class="grid--full products">
+{% comment %}
+  For layout unit 1
+{% endcomment %}
 
-  <div class="grid__item large--five-twelfths">
-    <div class="products-title">
-      <h1>Gifting</h1>
-    </div>
-    <div class="products-description">
-      <p>Donec mollis hendrerit risus. Cras sagittis. Fusce vulputate eleifend sapien. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Pellentesque commodo eros a enim.</p>
-    </div>
-    <div class="products-cta">
-      <a href="">View</a>
-    </div>
-  </div>
-  <div class="grid__item large--five-twelfths" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/setting_2048x2048.jpg)">
-    <div class="products-image">
-      <img src="//cdn.shopify.com/s/files/1/0941/6562/files/diamond_large.png" />
-    </div>
-  </div>
-  <div class="grid__item large--one-sixth medium-down--hide" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Tree_2048x2048.jpg)">
-  </div>
+{% assign number = 1 %}
 
-</div>
+{% if page.metafields.c_f.1_Type == 'textimageimage' %}
+  {% include 'text-image-image' %}
+{% endif %}
 
-<div class="grid--full callout-text-right">
-  <div class="grid__item large--one-half text-center">
-    <div class="callout-image">
-      <img src="//cdn.shopify.com/s/files/1/0941/6562/files/celebrate-image_2048x2048.png" />
-    </div>
-  </div>
-  <div class="grid__item large--one-half callout-right">
-    <div class="callout-title">
-      <h1>Vestibulum fringilla pede sit amet augue.</h1>
-    </div>
-    <div class="callout-description">
-      <p>Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Nam at tortor in tellus interdum sagittis. Proin faucibus arcu quis ante. Sed aliquam ultrices mauris. In hac habitasse platea dictumst.</p>
-    </div>
-  </div>
-</div>
+{% if page.metafields.c_f.1_Type == 'imageimagetext' %}
+  {% include 'image-image-text' %}
+{% endif %}
 
-<div class="grid--full quote">
-  <div class="grid__item large--one-half push--large--one-quarter text-center">
-    <div class="quote-content">
-      &ldquo;Donec posuere vulputate arcu. Vivamus quis mi.&rdquo;
-    </div>
-    <div class="quote-attribution">
-      S. Quis Neque Mollis
-    </div>
-  </div>
-</div>
+{% if page.metafields.c_f.1_Type == 'imagetext' %}
+  {% include 'image-text' %}
+{% endif %}
 
-<div class="grid--full callout-text-left">
+{% if page.metafields.c_f.1_Type == 'textimage' %}
+  {% include 'textimage' %}
+{% endif %}
 
-  <div class="grid__item large--one-half callout-left">
-    <div class="callout-title">
-      <h1>Sed fringilla mauris sit amet nibh. Sed augue ipsum.</h1>
-    </div>
-    <div class="callout-description">
-      <p>Donec mollis hendrerit risus. Cras sagittis. Fusce vulputate eleifend sapien. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Pellentesque commodo eros a enim.</p>
-    </div>
-  </div>
+{% if page.metafields.c_f.1_Type == 'quote' %}
+  {% include 'quote' %}
+{% endif %}
 
-  <div class="grid__item large--one-half callout-right">
-    <div class="callout-image-bottom" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/bottom_2048x2048.jpg)">
-    </div>
-    <div class="callout-image-top" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/top_2048x2048.jpg)">
-    </div>
-  </div>
+{% if page.metafields.c_f.1_Type == 'image' %}
+  {% include 'image' %}
+{% endif %}
 
-</div>
+{% comment %}
+  For layout unit 2
+{% endcomment %}
 
-<div class="grid--full image" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/IMG_3108_copy_2_2048x2048.jpg); background-size: cover; background-repeat: no-repeat;">
-</div>
+{% if page.metafields.c_f.2_Type == 'textimageimage' %}
+  {% include 'text-image-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.2_Type == 'imageimagetext' %}
+  {% include 'image-image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.2_Type == 'imagetext' %}
+  {% include 'image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.2_Type == 'textimage' %}
+  {% include 'textimage' %}
+{% endif %}
+
+{% if page.metafields.c_f.2_Type == 'quote' %}
+  {% include 'quote' %}
+{% endif %}
+
+{% if page.metafields.c_f.2_Type == 'image' %}
+  {% include 'image' %}
+{% endif %}
+
+{% comment %}
+  For layout unit 3
+{% endcomment %}
+
+{% if page.metafields.c_f.3_Type == 'textimageimage' %}
+  {% include 'text-image-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.3_Type == 'imageimagetext' %}
+  {% include 'image-image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.3_Type == 'imagetext' %}
+  {% include 'image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.3_Type == 'textimage' %}
+  {% include 'textimage' %}
+{% endif %}
+
+{% if page.metafields.c_f.3_Type == 'quote' %}
+  {% include 'quote' %}
+{% endif %}
+
+{% if page.metafields.c_f.3_Type == 'image' %}
+  {% include 'image' %}
+{% endif %}
+
+{% comment %}
+  For layout unit 4
+{% endcomment %}
+
+{% if page.metafields.c_f.4_Type == 'textimageimage' %}
+  {% include 'text-image-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.4_Type == 'imageimagetext' %}
+  {% include 'image-image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.4_Type == 'imagetext' %}
+  {% include 'image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.4_Type == 'textimage' %}
+  {% include 'textimage' %}
+{% endif %}
+
+{% if page.metafields.c_f.4_Type == 'quote' %}
+  {% include 'quote' %}
+{% endif %}
+
+{% if page.metafields.c_f.4_Type == 'image' %}
+  {% include 'image' %}
+{% endif %}
+
+{% comment %}
+  For layout unit 5
+{% endcomment %}
+
+{% if page.metafields.c_f.5_Type == 'textimageimage' %}
+  {% include 'text-image-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.5_Type == 'imageimagetext' %}
+  {% include 'image-image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.5_Type == 'imagetext' %}
+  {% include 'image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.5_Type == 'textimage' %}
+  {% include 'textimage' %}
+{% endif %}
+
+{% if page.metafields.c_f.5_Type == 'quote' %}
+  {% include 'quote' %}
+{% endif %}
+
+{% if page.metafields.c_f.5_Type == 'image' %}
+  {% include 'image' %}
+{% endif %}
+
+{% comment %}
+  For layout unit 6
+{% endcomment %}
+
+{% if page.metafields.c_f.6_Type == 'textimageimage' %}
+  {% include 'text-image-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.6_Type == 'imageimagetext' %}
+  {% include 'image-image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.6_Type == 'imagetext' %}
+  {% include 'image-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.6_Type == 'textimage' %}
+  {% include 'textimage' %}
+{% endif %}
+
+{% if page.metafields.c_f.6_Type == 'quote' %}
+  {% include 'quote' %}
+{% endif %}
+
+{% if page.metafields.c_f.6_Type == 'image' %}
+  {% include 'image' %}
+{% endif %}
+
+
 
 <div class="grid--full social">
   <div class="grid__item text-center">
