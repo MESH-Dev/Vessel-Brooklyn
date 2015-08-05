@@ -57,7 +57,8 @@
       get: 'user',
       userId: 199721613,
       accessToken: '19403516.22cb2c4.afd9be3b43184423b6fdf34cec830bfa',
-      limit: 6
+      limit: 6,
+      resolution: 'standard_resolution'
     });
     feed.run();
   </script>
@@ -185,7 +186,20 @@
 
     {% endif %}
 
-    <header class="site-header" role="banner">
+    {% if template == 'index' %}
+      <header class="site-header" role="banner">
+    {% else %}
+      <header class="site-header site-header-interior" role="banner">
+    {% endif %}
+
+      <div class="mobile mobile-cart">
+        <a href="/cart" class="site-header__cart-toggle js-drawer-open-right" aria-controls="CartDrawer" aria-expanded="false">
+          <span class="icon-fallback-text">
+            <span class="icon icon-cart" aria-hidden="true"></span>
+          </span>
+        </a>
+      </div>
+
       <div class="wrapper">
 
         <div class="grid--full grid--table menu-items">
@@ -229,6 +243,12 @@
             {% endif %}
           </div>
 
+          <div class="grid__item large--one-eighth mobile">
+            <a href="/">
+              <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/logo-interior.png?18107563605760467854" />
+            </a>
+          </div>
+
           <div class="grid__item large--one-eighth menu-moments">
             <a href="/collections/gifting">
               <img src="//cdn.shopify.com/s/files/1/0941/6562/files/celebrate_large.png" />
@@ -242,7 +262,7 @@
             </a>
           </div>
 
-          <div class="grid__item large--one-twelfth">
+          <div class="grid__item large--one-twelfth medium-down--hide">
             {% comment %}
               Show number of items in the cart and total cost in the /cart link
 
@@ -316,7 +336,13 @@
       </div>
     </nav> -->
 
-    <main class="wrapper main-content" role="main">
+    {% if template == 'index' %}
+      <main class="wrapper main-content" role="main">
+    {% else %}
+      <main class="wrapper main-content main-content-interior" role="main">
+    {% endif %}
+
+
 
       {{ content_for_layout }}
 

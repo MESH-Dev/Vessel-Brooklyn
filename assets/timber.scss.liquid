@@ -719,8 +719,11 @@ body {
 
 .main-content {
   display: block;
-  margin-top: $gutter;
   padding: 0;
+}
+
+.main-content-interior {
+  margin-top: 170px;
 }
 
 .template-index .main-content {
@@ -1786,6 +1789,12 @@ label.error {
   }
 }
 
+.site-header-interior {
+  position: fixed;
+  height: 170px;
+  background: white;
+}
+
 .site-header__logo {
   text-align: center;
   margin: 0;
@@ -2639,7 +2648,7 @@ label.error {
   padding: 150px 100px;
 
   @include at-query ($max, $medium) {
-    padding: 75px;
+    padding: 50px;
   }
 
   .products-image {
@@ -2697,6 +2706,10 @@ label.error {
 
 .moments {
   height: 950px;
+
+  @include at-query ($max, $medium) {
+    height: 100%;
+  }
 }
 
 .moments-left {
@@ -2783,20 +2796,32 @@ label.error {
 
 .callout-text-right {
   padding: 150px 0;
+
+  @include at-query ($max, $medium) {
+    padding: 50px 0;
+  }
 }
 
 .callout-image {
   width: 600px;
   margin: 0 auto 50px;
+
+  @include at-query ($max, $medium) {
+    width: 100%;
+  }
 }
 
 .callout-text-right .callout-right {
   padding: 0 100px;
+
+  @include at-query ($max, $medium) {
+    padding: 0 50px;
+  }
 }
 
 .quote {
   background-color: #ffefe7;
-  padding: 100px 0;
+  padding: 50px 25px;
 }
 
 .quote-content {
@@ -2816,6 +2841,10 @@ label.error {
 
 .callout-text-left {
   height: 950px;
+
+  @include at-query ($max, $medium) {
+    height: 100%;
+  }
 }
 
 .callout-image-top {
@@ -2831,6 +2860,10 @@ label.error {
 
 .callout-text-left .callout-left {
   padding: 150px;
+
+  @include at-query ($max, $medium) {
+    padding: 50px;
+  }
 }
 
 .image {
@@ -2839,16 +2872,26 @@ label.error {
 
 .social {
   padding: 100px 0 20px;
+
+  @include at-query ($max, $medium) {
+    padding: 50px 0 20px;
+  }
 }
 
 #instafeed {
   margin: 30px auto 30px;
-  width: 650px;
 }
 
 #instafeed img {
-  margin-right: 20px;
-  margin-bottom: 20px;
+  padding: 10px 10px 0 10px;
+  width: 15%;
+
+  @include at-query ($max, $medium) {
+    width: 45%;
+  }
+  @include at-query ($max, $small) {
+    width: 100%;
+  }
 }
 
 #instafeed img:hover {
@@ -2858,15 +2901,24 @@ label.error {
 .shop {
   height: 800px;
   margin-bottom: 100px;
+
+  @include at-query ($max, $medium) {
+    height: 100%;
+    margin-bottom: 50px;
+  }
 }
 
 .shop .large--one-half {
   height: 100%;
   background-repeat: no-repeat;
   background-color: #07262c;
-  height: 100%;
   display: table;
   padding: 150px 100px;
+
+  @include at-query ($max, $medium) {
+    padding: 50px;
+    height: 300px;
+  }
 }
 
 .product-title {
@@ -2892,7 +2944,7 @@ label.error {
 
 .product-item {
   display: block;
-  margin-bottom: 30px;
+  margin: 0 10px 30px 10px;
 }
 
 .product-left {
@@ -2999,4 +3051,23 @@ label.error {
 
 .menu-items a .icon-cart {
   font-size: 24px;
+}
+
+.mobile {
+  display: none !important;
+
+  @include at-query ($max, $medium) {
+    display: table-cell !important;
+  }
+}
+
+.mobile-cart {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 18px;
+
+  a {
+    color: black;
+  }
 }
