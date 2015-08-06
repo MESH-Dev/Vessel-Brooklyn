@@ -1,24 +1,24 @@
 <div class="grid--full products">
 
   <div class="grid__item large--five-twelfths">
-    {% if page.metafields.c_f.1_Title %}
-      <div class="products-title">
-        <h1>{{ page.metafields.c_f.1_Title }}</h1>
-      </div>
-    {% endif %}
+
+    <div class="products-title">
+      <h1>{{ title }}</h1>
+    </div>
+
     <div class="products-description">
-      <p>Donec mollis hendrerit risus. Cras sagittis. Fusce vulputate eleifend sapien. Nulla neque dolor, sagittis eget, iaculis quis, molestie non, velit. Pellentesque commodo eros a enim.</p>
+      <p>{{ description }}</p>
     </div>
     <div class="products-cta">
-      <a href="">View</a>
+      <a href="{{ url }}">{{ cta }}</a>
     </div>
   </div>
-  <div class="grid__item large--five-twelfths" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/setting_2048x2048.jpg)">
+  <div class="grid__item large--five-twelfths" style="background: url({{ image1 }})">
     <div class="products-image">
       <img src="//cdn.shopify.com/s/files/1/0941/6562/files/diamond_large.png" />
     </div>
   </div>
-  <div class="grid__item large--one-sixth medium-down--hide" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Tree_2048x2048.jpg)">
+  <div class="grid__item large--one-sixth medium-down--hide" style="background: url({{ image2 }})">
   </div>
 
 </div>

@@ -17,9 +17,15 @@
   For layout unit 1
 {% endcomment %}
 
-{% assign number = 1 %}
+{% assign type = page.metafields.c_f.1_Type %}
+{% assign title = page.metafields.c_f.1_Title %}
+{% assign description = page.metafields.c_f.1_Description %}
+{% assign cta = page.metafields.c_f.1_CTA %}
+{% assign url = page.metafields.c_f.1_URL %}
+{% assign image1 = page.metafields.c_f.1_Image1 %}
+{% assign image2 = page.metafields.c_f.1_Image2 %}
 
-{% if page.metafields.c_f.1_Type == 'textimageimage' %}
+{% if type == 'textimageimage' %}
   {% include 'text-image-image' %}
 {% endif %}
 
@@ -32,8 +38,17 @@
 {% endif %}
 
 {% if page.metafields.c_f.1_Type == 'textimage' %}
-  {% include 'textimage' %}
+  {% include 'text-image' %}
 {% endif %}
+
+{% if page.metafields.c_f.1_Type == 'image2xtext' %}
+  {% include 'image2x-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.1_Type == 'textimage2x' %}
+  {% include 'text-image2x' %}
+{% endif %}
+
 
 {% if page.metafields.c_f.1_Type == 'quote' %}
   {% include 'quote' %}
@@ -46,6 +61,14 @@
 {% comment %}
   For layout unit 2
 {% endcomment %}
+
+{% assign type = page.metafields.c_f.2_Type %}
+{% assign title = page.metafields.c_f.2_Title %}
+{% assign description = page.metafields.c_f.2_Description %}
+{% assign cta = page.metafields.c_f.2_CTA %}
+{% assign url = page.metafields.c_f.2_URL %}
+{% assign image1 = page.metafields.c_f.2_Image1 %}
+{% assign image2 = page.metafields.c_f.2_Image2 %}
 
 {% if page.metafields.c_f.2_Type == 'textimageimage' %}
   {% include 'text-image-image' %}
@@ -60,7 +83,15 @@
 {% endif %}
 
 {% if page.metafields.c_f.2_Type == 'textimage' %}
-  {% include 'textimage' %}
+  {% include 'text-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.2_Type == 'image2xtext' %}
+  {% include 'image2x-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.2_Type == 'textimage2x' %}
+  {% include 'text-image2x' %}
 {% endif %}
 
 {% if page.metafields.c_f.2_Type == 'quote' %}
@@ -75,6 +106,14 @@
   For layout unit 3
 {% endcomment %}
 
+{% assign type = page.metafields.c_f.3_Type %}
+{% assign title = page.metafields.c_f.3_Title %}
+{% assign description = page.metafields.c_f.3_Description %}
+{% assign cta = page.metafields.c_f.3_CTA %}
+{% assign url = page.metafields.c_f.3_URL %}
+{% assign image1 = page.metafields.c_f.3_Image1 %}
+{% assign image2 = page.metafields.c_f.3_Image2 %}
+
 {% if page.metafields.c_f.3_Type == 'textimageimage' %}
   {% include 'text-image-image' %}
 {% endif %}
@@ -88,7 +127,15 @@
 {% endif %}
 
 {% if page.metafields.c_f.3_Type == 'textimage' %}
-  {% include 'textimage' %}
+  {% include 'text-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.3_Type == 'image2xtext' %}
+  {% include 'image2x-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.3_Type == 'textimage2x' %}
+  {% include 'text-image2x' %}
 {% endif %}
 
 {% if page.metafields.c_f.3_Type == 'quote' %}
@@ -103,6 +150,14 @@
   For layout unit 4
 {% endcomment %}
 
+{% assign type = page.metafields.c_f.4_Type %}
+{% assign title = page.metafields.c_f.4_Title %}
+{% assign description = page.metafields.c_f.4_Description %}
+{% assign cta = page.metafields.c_f.4_CTA %}
+{% assign url = page.metafields.c_f.4_URL %}
+{% assign image1 = page.metafields.c_f.4_Image1 %}
+{% assign image2 = page.metafields.c_f.4_Image2 %}
+
 {% if page.metafields.c_f.4_Type == 'textimageimage' %}
   {% include 'text-image-image' %}
 {% endif %}
@@ -116,7 +171,15 @@
 {% endif %}
 
 {% if page.metafields.c_f.4_Type == 'textimage' %}
-  {% include 'textimage' %}
+  {% include 'text-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.4_Type == 'image2xtext' %}
+  {% include 'image2x-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.4_Type == 'textimage2x' %}
+  {% include 'text-image2x' %}
 {% endif %}
 
 {% if page.metafields.c_f.4_Type == 'quote' %}
@@ -131,6 +194,14 @@
   For layout unit 5
 {% endcomment %}
 
+{% assign type = page.metafields.c_f.5_Type %}
+{% assign title = page.metafields.c_f.5_Title %}
+{% assign description = page.metafields.c_f.5_Description %}
+{% assign cta = page.metafields.c_f.5_CTA %}
+{% assign url = page.metafields.c_f.5_URL %}
+{% assign image1 = page.metafields.c_f.5_Image1 %}
+{% assign image2 = page.metafields.c_f.5_Image2 %}
+
 {% if page.metafields.c_f.5_Type == 'textimageimage' %}
   {% include 'text-image-image' %}
 {% endif %}
@@ -144,7 +215,15 @@
 {% endif %}
 
 {% if page.metafields.c_f.5_Type == 'textimage' %}
-  {% include 'textimage' %}
+  {% include 'text-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.5_Type == 'image2xtext' %}
+  {% include 'image2x-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.5_Type == 'textimage2x' %}
+  {% include 'text-image2x' %}
 {% endif %}
 
 {% if page.metafields.c_f.5_Type == 'quote' %}
@@ -159,6 +238,14 @@
   For layout unit 6
 {% endcomment %}
 
+{% assign type = page.metafields.c_f.6_Type %}
+{% assign title = page.metafields.c_f.6_Title %}
+{% assign description = page.metafields.c_f.6_Description %}
+{% assign cta = page.metafields.c_f.6_CTA %}
+{% assign url = page.metafields.c_f.6_URL %}
+{% assign image1 = page.metafields.c_f.6_Image1 %}
+{% assign image2 = page.metafields.c_f.6_Image2 %}
+
 {% if page.metafields.c_f.6_Type == 'textimageimage' %}
   {% include 'text-image-image' %}
 {% endif %}
@@ -172,7 +259,15 @@
 {% endif %}
 
 {% if page.metafields.c_f.6_Type == 'textimage' %}
-  {% include 'textimage' %}
+  {% include 'text-image' %}
+{% endif %}
+
+{% if page.metafields.c_f.6_Type == 'image2xtext' %}
+  {% include 'image2x-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.6_Type == 'textimage2x' %}
+  {% include 'text-image2x' %}
 {% endif %}
 
 {% if page.metafields.c_f.6_Type == 'quote' %}
