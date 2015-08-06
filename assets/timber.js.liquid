@@ -446,15 +446,15 @@ timber.Drawers = (function () {
 
 $(document).ready(function() {
 
-
+  $('.close').click(function() {
+    $('.contact').addClass('fadeOut');
+  });
 
   $('.menu-gifting').mouseenter(function() {
     $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/flowers.jpg?14938704169794946651)');
   }).mouseleave(function() {
     $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
   });
-
-
 
   $(window).scroll(sticky_relocate);
 
