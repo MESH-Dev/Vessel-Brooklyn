@@ -447,8 +447,14 @@ timber.Drawers = (function () {
 $(document).ready(function() {
 
   $('.close').click(function() {
-    $('.contact').addClass('fadeOut');
+    $('.contact').fadeOut();
   });
+
+  $('.contact').hide();
+
+  $('.get-in-touch').click(function() {
+    $('.contact').fadeIn();
+  })
 
   $('.menu-gifting').mouseenter(function() {
     $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/flowers.jpg?14938704169794946651)');
