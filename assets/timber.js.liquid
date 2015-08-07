@@ -476,14 +476,18 @@ $(document).ready(function() {
 			if (scrolled) {
 				scrolled = false;
         $('.index-banner').css('margin-top', -div_top);
-        $('.site-header').addClass('site-header-interior');
-        $('.main-content').addClass('main-content-interior');
+
 				$('html, body').animate({
 					scrollTop: 0
 				}, 0);
 			}
 		}
+
 	}
+
+  var h = $(window).height();
+
+  $('.index-banner').css('height', h - 170);
 
 });
 

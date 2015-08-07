@@ -722,9 +722,6 @@ body {
   padding: 0;
 }
 
-.main-content-interior {
-  margin-top: 170px;
-}
 
 .template-index .main-content {
   @include at-query ($max, $small) {
@@ -1776,6 +1773,9 @@ label.error {
 .site-header {
   padding: ($gutter) 0;
   position: relative;
+  height: 170px;
+  background: white;
+  z-index: 10;
 
   .grid--table {
     display: table;
@@ -1791,10 +1791,7 @@ label.error {
 }
 
 .site-header-interior {
-  position: fixed;
-  height: 170px;
-  background: white;
-  z-index: 10;
+
 }
 
 .site-header__logo {
@@ -2562,7 +2559,7 @@ label.error {
 
 .index-banner {
   background: url(//cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg);
-  height: 830px;
+  height: 710px;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -2572,7 +2569,7 @@ label.error {
 }
 
 .index-banner-home {
-  padding-top: 135px;
+  padding-top: 50px;
   text-align: center;
 
   @include at-query ($max, $small) {
@@ -2941,7 +2938,7 @@ label.error {
 }
 
 .product {
-  height: 900px;
+  height: 700px;
 }
 
 .product-price {
