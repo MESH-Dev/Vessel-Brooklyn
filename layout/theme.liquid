@@ -445,11 +445,12 @@
     var $wrap  = $frame.parent();
 
     $frame.sly({
-      horizontal: 1,
-    itemNav: 'basic',
-    speed: 300,
-    mouseDragging: 1,
-    touchDragging: 1
+      speed: 300,
+			activatePageOn: 'click',
+			scrollBy: 100,
+			dragHandle: 1,
+			dynamicHandle: 1,
+			clickBar: 1
     });
 
   </script>

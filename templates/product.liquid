@@ -26,7 +26,7 @@
 
 </div>
 
-<div class="grid product">
+<div class="grid--full product">
 
 {% assign current_variant = product.selected_or_first_available_variant %}
 
@@ -37,30 +37,19 @@
 
     <div class="frame nonitembased" id="nonitembased">
       <div class="slidee">
+        <!-- <img src="{{ featured_image | img_url: 'master' }}" />
         <img src="{{ featured_image | img_url: 'master' }}" />
         <img src="{{ featured_image | img_url: 'master' }}" />
+        <img src="{{ featured_image | img_url: 'master' }}" /> -->
+
         <img src="{{ featured_image | img_url: 'master' }}" />
-        <img src="{{ featured_image | img_url: 'master' }}" />
+
+        {% for image in product.images %}
+          <img src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}">
+        {% endfor %}
+
       </div>
     </div>
-
-    <ul class="pages"></ul>
-
-    
-
-    {% if product.images.size > 1 %}
-        <ul class="product-single__thumbnails grid-uniform" id="ProductThumbs">
-
-          {% for image in product.images %}
-            <li class="grid__item one-quarter">
-              <a href="{{ image.src | img_url: 'large' }}" class="product-single__thumbnail">
-                <img src="{{ image.src | img_url: 'compact' }}" alt="{{ image.alt | escape }}">
-              </a>
-            </li>
-          {% endfor %}
-
-        </ul>
-      {% endif %}
 
   </div>
 
