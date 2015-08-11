@@ -44,6 +44,8 @@
 
   {{ 'jquery.waitforimages.js' | asset_url | script_tag }}
 
+  {{ 'sly.js' | asset_url | script_tag }}
+
   {% comment %}
     If you store has customer accounts disabled, you can remove the following JS file
   {% endcomment %}
@@ -437,6 +439,21 @@
     </script>
   {% endif %}
 
+  <script type="text/javascript">
+
+    var $frame = $('#nonitembased');
+    var $wrap  = $frame.parent();
+
+    $frame.sly({
+      horizontal: 1,
+    itemNav: 'basic',
+    speed: 300,
+    mouseDragging: 1,
+    touchDragging: 1
+    });
+
+  </script>
+
   <div class="contact">
     <div class="grid">
 
@@ -492,6 +509,8 @@
     </div>
 
   </div>
+
+
 
 </body>
 </html>
