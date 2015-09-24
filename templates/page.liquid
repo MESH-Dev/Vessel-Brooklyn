@@ -19,7 +19,9 @@
 
 {% assign type = page.metafields.c_f.1_Type %}
 {% assign title = page.metafields.c_f.1_Title %}
+{% assign title2 = page.metafields.c_f.1_Title2 %}
 {% assign description = page.metafields.c_f.1_Description %}
+{% assign description2 = page.metafields.c_f.1_Description2 %}
 {% assign cta = page.metafields.c_f.1_CTA %}
 {% assign url = page.metafields.c_f.1_URL %}
 {% assign image1 = page.metafields.c_f.1_Image1 %}
@@ -66,13 +68,19 @@
   {% include 'text-bigimage' %}
 {% endif %}
 
+{% if page.metafields.c_f.1_Type == 'texttext' %}
+  {% include 'text-text' %}
+{% endif %}
+
 {% comment %}
   For layout unit 2
 {% endcomment %}
 
 {% assign type = page.metafields.c_f.2_Type %}
 {% assign title = page.metafields.c_f.2_Title %}
+{% assign title2 = page.metafields.c_f.2_Title2 %}
 {% assign description = page.metafields.c_f.2_Description %}
+{% assign description2 = page.metafields.c_f.2_Description2 %}
 {% assign cta = page.metafields.c_f.2_CTA %}
 {% assign url = page.metafields.c_f.2_URL %}
 {% assign image1 = page.metafields.c_f.2_Image1 %}
@@ -124,7 +132,9 @@
 
 {% assign type = page.metafields.c_f.3_Type %}
 {% assign title = page.metafields.c_f.3_Title %}
+{% assign title2 = page.metafields.c_f.3_Title2 %}
 {% assign description = page.metafields.c_f.3_Description %}
+{% assign description2 = page.metafields.c_f.3_Description2 %}
 {% assign cta = page.metafields.c_f.3_CTA %}
 {% assign url = page.metafields.c_f.3_URL %}
 {% assign image1 = page.metafields.c_f.3_Image1 %}
@@ -176,7 +186,9 @@
 
 {% assign type = page.metafields.c_f.4_Type %}
 {% assign title = page.metafields.c_f.4_Title %}
+{% assign title2 = page.metafields.c_f.4_Title2 %}
 {% assign description = page.metafields.c_f.4_Description %}
+{% assign description2 = page.metafields.c_f.4_Description2 %}
 {% assign cta = page.metafields.c_f.4_CTA %}
 {% assign url = page.metafields.c_f.4_URL %}
 {% assign image1 = page.metafields.c_f.4_Image1 %}
@@ -228,7 +240,9 @@
 
 {% assign type = page.metafields.c_f.5_Type %}
 {% assign title = page.metafields.c_f.5_Title %}
+{% assign title2 = page.metafields.c_f.5_Title2 %}
 {% assign description = page.metafields.c_f.5_Description %}
+{% assign description2 = page.metafields.c_f.5_Description2 %}
 {% assign cta = page.metafields.c_f.5_CTA %}
 {% assign url = page.metafields.c_f.5_URL %}
 {% assign image1 = page.metafields.c_f.5_Image1 %}
@@ -280,7 +294,9 @@
 
 {% assign type = page.metafields.c_f.6_Type %}
 {% assign title = page.metafields.c_f.6_Title %}
+{% assign title2 = page.metafields.c_f.6_Title2 %}
 {% assign description = page.metafields.c_f.6_Description %}
+{% assign description2 = page.metafields.c_f.6_Description2 %}
 {% assign cta = page.metafields.c_f.6_CTA %}
 {% assign url = page.metafields.c_f.6_URL %}
 {% assign image1 = page.metafields.c_f.6_Image1 %}
