@@ -1740,7 +1740,7 @@ label.error {
     color: white;
 
     &:hover {
-      color: darken({{ settings.color_footer_social_link }}, 10%);
+      color: #ffefe7;
     }
   }
 }
@@ -2194,7 +2194,7 @@ label.error {
 ==============================================================================*/
 .site-footer {
   background: url(//cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg);
-  height: 50px;
+  height: 60px;
   background-repeat: no-repeat;
   background-size: cover;
   padding: ($gutter/2) 0 0;
@@ -2562,6 +2562,7 @@ label.error {
   height: 710px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 
   @include at-query ($max, $small) {
     height: 500px;
@@ -2699,6 +2700,10 @@ label.error {
 .celebrate-image {
   width: 600px;
   margin: 0 auto 50px;
+
+  @include at-query ($max, $medium) {
+    width: 100%;
+  }
 }
 
 .celebrate-text {
@@ -2772,6 +2777,11 @@ label.error {
 .about-image {
   width: 600px;
   margin: 0 auto 50px;
+
+  @include at-query ($max, $medium) {
+    width: 100%;
+  }
+
 }
 
 .about-text {
@@ -2788,6 +2798,10 @@ label.error {
       text-transform: uppercase;
       font-family: neutratextbold;
       margin-right: 20px;
+
+      &:hover {
+        color: #ffefe7;
+      }
     }
   }
 }
@@ -3105,4 +3119,19 @@ label.error {
 .frame {
   width: 100%;
   height: 100%;
+}
+
+.menu-items a {
+  &:hover {
+    color: #18e0d8;
+  }
+}
+
+.hover {
+  img {
+    height: 38px;
+    width: 38px;
+  }
+
+  display: none;
 }

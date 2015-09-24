@@ -44,6 +44,8 @@
 
   {{ 'jquery.waitforimages.js' | asset_url | script_tag }}
 
+  {{ 'jquery.parallax-1.1.3.js' | asset_url | script_tag }}
+
   {{ 'sly.js' | asset_url | script_tag }}
 
   {% comment %}
@@ -211,14 +213,24 @@
           </div>
 
           <div class="grid__item large--one-eighth menu-gifting">
-            <a href="/collections/gifting">
-              <img src="//cdn.shopify.com/s/files/1/0941/6562/files/moments_large.png" />
+            <a href="/pages/gifting">
+              <div class="land">
+                <img src="//cdn.shopify.com/s/files/1/0941/6562/files/moments_large.png" />
+              </div>
+              <div class="hover">
+                <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Gifting.png?9428823851147239333" />
+              </div>
               Gifting
             </a>
           </div>
           <div class="grid__item large--one-eighth menu-celebrate">
             <a href="/pages/celebrate">
-              <img src="//cdn.shopify.com/s/files/1/0941/6562/files/gifting_large.png" />
+              <div class="land">
+                <img src="//cdn.shopify.com/s/files/1/0941/6562/files/gifting_large.png" />
+              </div>
+              <div class="hover">
+                <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Celebrate.png?9428823851147239333" />
+              </div>
               Celebrate
             </a>
           </div>
@@ -255,13 +267,24 @@
 
           <div class="grid__item large--one-eighth menu-moments">
             <a href="/pages/moments">
-              <img src="//cdn.shopify.com/s/files/1/0941/6562/files/celebrate_large.png" />
+              <div class="land">
+                <img src="//cdn.shopify.com/s/files/1/0941/6562/files/celebrate_large.png" />
+              </div>
+              <div class="hover">
+                <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Moments.png?9428823851147239333" />
+              </div>
               Moments
             </a>
           </div>
           <div class="grid__item large--one-eighth menu-about">
             <a href="/pages/about">
-              <img src="//cdn.shopify.com/s/files/1/0941/6562/files/about_large.png" />
+              <div class="land">
+                <img src="//cdn.shopify.com/s/files/1/0941/6562/files/about_large.png" />
+              </div>
+              <div class="hover">
+                <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Bkln.png?9428823851147239333" />
+              </div>
+
               About
             </a>
           </div>

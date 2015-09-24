@@ -456,10 +456,20 @@ $(document).ready(function() {
     $('.contact').fadeIn();
   })
 
-  $('.menu-gifting').mouseenter(function() {
-    $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/flowers.jpg?14938704169794946651)');
+  // $('.menu-gifting').mouseenter(function() {
+  //  $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/flowers.jpg?14938704169794946651)');
+  // }).mouseleave(function() {
+  //  $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+  // });
+
+  $('.menu-items a').mouseenter(function() {
+   // $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/flowers.jpg?14938704169794946651)');
+   $(this).find('.land').toggle();
+   $(this).find('.hover').toggle();
   }).mouseleave(function() {
-    $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+   // $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+   $(this).find('.land').toggle();
+   $(this).find('.hover').toggle();
   });
 
   $(window).scroll(sticky_relocate);
@@ -488,6 +498,8 @@ $(document).ready(function() {
   var h = $(window).height();
 
   $('.index-banner').css('height', h - 170);
+
+  $('.index-banner').parallax("center", 0.1);
 
 });
 
