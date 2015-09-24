@@ -456,18 +456,48 @@ $(document).ready(function() {
     $('.contact').fadeIn();
   })
 
-  // $('.menu-gifting').mouseenter(function() {
-  //  $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/flowers.jpg?14938704169794946651)');
-  // }).mouseleave(function() {
-  //  $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
-  // });
+  $('.menu-gifting').mouseenter(function() {
+    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/pinkleaves.png?3384530035518228149)');
+    $('.index-logo-gifting').toggle();
+    $('.index-logo-about').toggle();
+  }).mouseleave(function() {
+    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+    $('.index-logo-gifting').toggle();
+    $('.index-logo-about').toggle();
+  });
+
+
+  $('.menu-celebrate').mouseenter(function() {
+    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/blueyucca.png?3384530035518228149)');
+    $('.index-logo-celebrations').toggle();
+    $('.index-logo-about').toggle();
+  }).mouseleave(function() {
+    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+    $('.index-logo-celebrations').toggle();
+    $('.index-logo-about').toggle();
+  });
+
+  $('.menu-moments').mouseenter(function() {
+    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/bluerose.png?3384530035518228149)');
+    $('.index-logo-moments').toggle();
+    $('.index-logo-about').toggle();
+  }).mouseleave(function() {
+    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+    $('.index-logo-moments').toggle();
+    $('.index-logo-about').toggle();
+  });
+
+  $('.menu-about').mouseenter(function() {
+    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/blueleaves.png?3384530035518228149)');
+  }).mouseleave(function() {
+    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+  });
+
 
   $('.menu-items a').mouseenter(function() {
-   // $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/flowers.jpg?14938704169794946651)');
    $(this).find('.land').toggle();
    $(this).find('.hover').toggle();
   }).mouseleave(function() {
-   // $('.index-banner').css('background', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
    $(this).find('.land').toggle();
    $(this).find('.hover').toggle();
   });
