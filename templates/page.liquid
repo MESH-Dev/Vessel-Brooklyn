@@ -1,5 +1,5 @@
 <!-- /templates/page.liquid -->
-<div class="grid--full" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/header-bg_2048x2048.jpg); background-repeat: no-repeat; background-size: cover;">
+<div class="grid--full" style="background: url(//cdn.shopify.com/s/files/1/0941/6562/files/header-bg_2048x2048.jpg); background-repeat: no-repeat; background-size: cover; background-position: center;">
 
   <div class="grid__item large--two-thirds push--large--one-sixth text-center page-banner">
 
@@ -58,6 +58,14 @@
   {% include 'image' %}
 {% endif %}
 
+{% if page.metafields.c_f.1_Type == 'bigimagetext' %}
+  {% include 'bigimage-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.1_Type == 'textbigimage' %}
+  {% include 'text-bigimage' %}
+{% endif %}
+
 {% comment %}
   For layout unit 2
 {% endcomment %}
@@ -100,6 +108,14 @@
 
 {% if page.metafields.c_f.2_Type == 'image' %}
   {% include 'image' %}
+{% endif %}
+
+{% if page.metafields.c_f.2_Type == 'bigimagetext' %}
+  {% include 'bigimage-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.2_Type == 'textbigimage' %}
+  {% include 'text-bigimage' %}
 {% endif %}
 
 {% comment %}
@@ -146,6 +162,14 @@
   {% include 'image' %}
 {% endif %}
 
+{% if page.metafields.c_f.3_Type == 'bigimagetext' %}
+  {% include 'bigimage-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.3_Type == 'textbigimage' %}
+  {% include 'text-bigimage' %}
+{% endif %}
+
 {% comment %}
   For layout unit 4
 {% endcomment %}
@@ -188,6 +212,14 @@
 
 {% if page.metafields.c_f.4_Type == 'image' %}
   {% include 'image' %}
+{% endif %}
+
+{% if page.metafields.c_f.4_Type == 'bigimagetext' %}
+  {% include 'bigimage-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.4_Type == 'textbigimage' %}
+  {% include 'text-bigimage' %}
 {% endif %}
 
 {% comment %}
@@ -234,6 +266,14 @@
   {% include 'image' %}
 {% endif %}
 
+{% if page.metafields.c_f.5_Type == 'bigimagetext' %}
+  {% include 'bigimage-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.5_Type == 'textbigimage' %}
+  {% include 'text-bigimage' %}
+{% endif %}
+
 {% comment %}
   For layout unit 6
 {% endcomment %}
@@ -278,6 +318,13 @@
   {% include 'image' %}
 {% endif %}
 
+{% if page.metafields.c_f.6_Type == 'bigimagetext' %}
+  {% include 'bigimage-text' %}
+{% endif %}
+
+{% if page.metafields.c_f.6_Type == 'textbigimage' %}
+  {% include 'text-bigimage' %}
+{% endif %}
 
 
 <div class="grid--full social">

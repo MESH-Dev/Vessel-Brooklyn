@@ -58,6 +58,8 @@ $small: 480px;
 $medium: 768px;
 $large: 769px;
 
+$desktop-width: 1200px;
+
 $postSmall: $small + $viewportIncrement;
 $preMedium: $medium - $viewportIncrement;
 $preLarge: $large - $viewportIncrement;
@@ -2644,9 +2646,11 @@ label.error {
   background-color: #07262c;
   height: 100%;
   display: table;
-  padding: 150px 100px;
+  padding: 100px;
 
-  @include at-query ($max, $medium) {
+
+
+  @include at-query ($max, $desktop-width) {
     padding: 50px;
   }
 
@@ -2830,6 +2834,14 @@ label.error {
   }
 }
 
+.callout-text-right-big .callout-right {
+  padding: 100px;
+
+  @include at-query ($max, $medium) {
+    padding: 50px;
+  }
+}
+
 .callout-text-right .callout-right {
   padding: 0 100px;
 
@@ -2879,6 +2891,15 @@ label.error {
 
 .callout-text-left .callout-left {
   padding: 150px;
+
+  @include at-query ($max, $medium) {
+    padding: 50px;
+  }
+}
+
+
+.callout-text-left-big .callout-left {
+  padding: 100px;
 
   @include at-query ($max, $medium) {
     padding: 50px;
