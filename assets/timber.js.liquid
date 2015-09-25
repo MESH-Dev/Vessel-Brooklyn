@@ -457,56 +457,56 @@ $(document).ready(function() {
   })
 
   $('.menu-gifting').mouseenter(function() {
-    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/pinkleaves.png?3384530035518228149)');
+    // $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/pinkleaves.png?3384530035518228149)');
     $('.index-logo-gifting').toggle();
-    $('.index-logo-about').toggle();
-    $('.index-banner-home-text').toggle();
-    $('.index-banner-gifting-text').toggle();
+
+    $('.index-logo-home').toggle();
+    $('.index-banner').toggleClass('menu-gifting-hover');
   }).mouseleave(function() {
-    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+    // $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
     $('.index-logo-gifting').toggle();
-    $('.index-logo-about').toggle();
-    $('.index-banner-home-text').toggle();
-    $('.index-banner-gifting-text').toggle();
+
+    $('.index-logo-home').toggle();
+    $('.index-banner').toggleClass('menu-gifting-hover');
   });
 
 
   $('.menu-celebrate').mouseenter(function() {
-    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/blueyucca.png?3384530035518228149)');
+    // $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/blueyucca.png?3384530035518228149)');
     $('.index-logo-celebrations').toggle();
-    $('.index-logo-about').toggle();
-    $('.index-banner-home-text').toggle();
-    $('.index-banner-celebrations-text').toggle();
+
+    $('.index-logo-home').toggle();
+    $('.index-banner').toggleClass('menu-celebrations-hover');
   }).mouseleave(function() {
-    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+    // $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
     $('.index-logo-celebrations').toggle();
-    $('.index-logo-about').toggle();
-    $('.index-banner-home-text').toggle();
-    $('.index-banner-celebrations-text').toggle();
+
+    $('.index-logo-home').toggle();
+    $('.index-banner').toggleClass('menu-celebrations-hover');
   });
 
   $('.menu-moments').mouseenter(function() {
-    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/bluerose.png?3384530035518228149)');
+    // $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/bluerose.png?3384530035518228149)');
     $('.index-logo-moments').toggle();
-    $('.index-logo-about').toggle();
-    $('.index-banner-home-text').toggle();
-    $('.index-banner-moments-text').toggle();
+    $('.index-logo-home').toggle();
+    $('.index-banner').toggleClass('menu-moments-hover');
   }).mouseleave(function() {
-    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+    // $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
     $('.index-logo-moments').toggle();
-    $('.index-logo-about').toggle();
-    $('.index-banner-home-text').toggle();
-    $('.index-banner-moments-text').toggle();
+    $('.index-logo-home').toggle();
+    $('.index-banner').toggleClass('menu-moments-hover');
   });
 
   $('.menu-about').mouseenter(function() {
-    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/blueleaves.png?3384530035518228149)');
-    $('.index-banner-home-text').toggle();
-    $('.index-banner-about-text').toggle();
+    // $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/blueleaves.png?3384530035518228149)');
+    $('.index-logo-about').toggle();
+    $('.index-logo-home').toggle();
+    $('.index-banner').toggleClass('menu-about-hover');
   }).mouseleave(function() {
-    $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
-    $('.index-banner-home-text').toggle();
-    $('.index-banner-about-text').toggle();
+    // $('.index-banner').css('background-image', 'url(https://cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg)');
+    $('.index-logo-about').toggle();
+    $('.index-logo-home').toggle();
+    $('.index-banner').toggleClass('menu-about-hover');
   });
 
 
@@ -549,7 +549,9 @@ $(document).ready(function() {
 
   $('.index-banner').css('height', h - 170);
 
-  $('.index-banner').parallax("center", 0.1);
+  // $('.index-banner').parallax("center", 0.1);
+
+
 
 });
 

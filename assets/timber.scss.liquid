@@ -2563,17 +2563,63 @@ label.error {
   background-image: url(//cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg);
   height: 710px;
   background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  position: relative;
 
   @include at-query ($max, $small) {
     height: 500px;
   }
+
+  max-width: none;
+	width: -webkit-calc(100% + 50px);
+	width: calc(100% + 100px);
+
+	-webkit-transition: opacity 0.35s, -webkit-transform 1s, -webkit-filter 1s;
+	transition: opacity 0.35s, transform 1s;
+	-webkit-transform: translate3d(-50px,0, 0);
+	transform: translate3d(-50px,0,0);
+
+}
+
+.menu-gifting-hover {
+  -webkit-transform: translate3d(-100px,0,0);
+   transform: translate3d(-100px,0,0);
+
+   -webkit-filter: blur(1px);
+   filter: blur(1px);
+}
+
+.menu-celebrations-hover {
+  -webkit-transform: translate3d(-75px,0,0);
+   transform: translate3d(-75px,0,0);
+
+   -webkit-filter: blur(1px);
+   filter: blur(1px);
+}
+
+.menu-moments-hover {
+  -webkit-transform: translate3d(-25px,0,0);
+   transform: translate3d(-25px,0,0);
+
+   -webkit-filter: blur(1px);
+   filter: blur(1px);
+
+
+}
+
+.menu-about-hover {
+  -webkit-transform: translate3d(0,0,0);
+   transform: translate3d(0,0,0);
+
+   -webkit-filter: blur(1px);
+   filter: blur(1px);
 }
 
 .index-banner-home {
   padding-top: 50px;
   text-align: center;
+  position: absolute;
+  top: 0;
+  left: 40%;
 
   @include at-query ($max, $small) {
     display: none;
@@ -2884,19 +2930,21 @@ label.error {
 
 .callout-image-top {
   line-height: 0;
-  height: 475px;
+  height: 450px;
   background-size: cover;
 }
 
 .callout-image-bottom {
-  height: 475px;
+  height: 450px;
   background-size: cover;
 }
 
 .callout-text-left .callout-left {
   padding: 150px;
+  height: 900px;
+  display: table;
 
-  @include at-query ($max, $medium) {
+  @include at-query ($max, $desktop-width) {
     padding: 50px;
   }
 }
@@ -2977,7 +3025,7 @@ label.error {
 }
 
 .product {
-  height: 700px;
+  height: 850px;
 }
 
 .product-price {
@@ -3019,6 +3067,10 @@ label.error {
 
 .product-description {
 
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  color: #132129;
   margin: auto;
   p {
     color: #132129;
@@ -3161,22 +3213,58 @@ label.error {
   display: none;
 }
 
-.index-logo-celebrations, .index-logo-moments, .index-logo-gifting {
+.index-logo {
+  position: absolute;
+  left: 40%;
+}
+
+.index-logo-celebrations, .index-logo-moments, .index-logo-gifting, .index-logo-about {
   img {
-    height: 489px;
+
     width: 214px;
   }
 
   display: none;
+}
+
+.index-logo-home {
+  img {
+    width: 214px;
+  }
 }
 
 .index-logo-about {
   img {
-    height: 489px;
     width: 214px;
+
+    @include at-query ($max, $desktop-width) {
+      width: 13%;
+    }
   }
 }
 
-.index-banner-gifting-text, .index-banner-celebrations-text, .index-banner-moments-text, .index-banner-about-text {
+.current-gifting, .current-celebrate, .current-moments, .current-about {
+  a {
+    color: #18e0d8;
+  }
+}
+
+.current-gifting-menu, .current-celebrate-menu, .current-moments-menu, .current-about-menu {
   display: none;
+  img {
+    width: 38px;
+  }
+}
+
+.current-gifting .current-gifting-menu, .current-celebrate .current-celebrate-menu, .current-moments .current-moments-menu, .current-about .current-about-menu {
+  display: block;
+}
+
+.current-gifting .gifting-menu, .current-celebrate .celebrate-menu, .current-moments .moments-menu, .current-about .about-menu {
+  display: none;
+}
+
+.callout-text-container {
+  display: table-cell;
+  vertical-align: middle;
 }

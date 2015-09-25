@@ -12,7 +12,7 @@
 <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
 <meta itemprop="image" content="{{ product.featured_image.src | img_url: 'grande' }}">
 
-<div class="grid--full" style="background: url(https://cdn.shopify.com/s/files/1/0941/6562/files/top-nav.png); background-repeat: no-repeat; background-size: cover;">
+<div class="grid--full" style="background: url(https://cdn.shopify.com/s/files/1/0941/6562/files/blueleaves_a580dd19-8f9a-4b2d-b37b-924712ced5bc.png?13670975851267088673); background-repeat: no-repeat; background-size: cover;">
 
   <div class="grid__item large--two-thirds push--large--one-sixth text-center page-banner">
 
@@ -41,8 +41,6 @@
         <img src="{{ featured_image | img_url: 'master' }}" />
         <img src="{{ featured_image | img_url: 'master' }}" />
         <img src="{{ featured_image | img_url: 'master' }}" /> -->
-
-        <img src="{{ featured_image | img_url: 'master' }}" />
 
         {% for image in product.images %}
           <img src="{{ image.src | img_url: 'master' }}" alt="{{ image.alt | escape }}">

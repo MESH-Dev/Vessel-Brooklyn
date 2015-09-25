@@ -179,40 +179,48 @@
 
       <div class="index-banner">
 
-        <div class="index-banner-home">
-          <div class="index-logo-gifting">
-            <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-gifting.png?100996462189133030" />
-          </div>
-          <div class="index-logo-celebrations">
-            <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-celebrate.png?100996462189133030" />
-          </div>
-          <div class="index-logo-moments">
-            <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-moments.png?100996462189133030" />
-          </div>
-          <div class="index-logo-about">
-            <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-bkln.png?100996462189133030" />
-          </div>
-          <div class="index-banner-text index-banner-home-text">
-            Creatively curating personalized Moments, unforgettable Celebrations, and one-of-a-kind Gifts
-          </div>
+
+
+      </div>
+
+      <div class="index-banner-home">
+
+        <div class="index-logo-gifting index-logo">
+          <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-gifting.png?100996462189133030" />
           <div class="index-banner-text index-banner-gifting-text">
             Curating inspired, personalized Gifts to be treasured always
           </div>
+        </div>
+        <div class="index-logo-celebrations index-logo">
+          <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-celebrate.png?100996462189133030" />
           <div class="index-banner-text index-banner-celebrations-text">
             Tailoring special gatherings and events with the most thoughtful details
           </div>
+        </div>
+        <div class="index-logo-moments index-logo">
+          <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-moments.png?100996462189133030" />
           <div class="index-banner-text index-banner-moments-text">
             Creating intimate moments for your most cherished milestones
           </div>
+        </div>
+        <div class="index-logo-about index-logo">
+          <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-bkln.png?100996462189133030" />
           <div class="index-banner-text index-banner-about-text">
             Producing truly custom Creations with expert curation and just a touch of whimsy
           </div>
         </div>
 
-        <div class="index-mobile-home">
-          <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/vessel-mobile.png?13130002969165042751" />
+        <div class="index-logo-home index-logo">
+          <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-bkln.png?100996462189133030" />
+          <div class="index-banner-text index-banner-home-text">
+            Creatively curating personalized Moments, unforgettable Celebrations, and one-of-a-kind Gifts
+          </div>
         </div>
 
+      </div>
+
+      <div class="index-mobile-home">
+        <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/vessel-mobile.png?13130002969165042751" />
       </div>
 
     {% endif %}
@@ -237,10 +245,15 @@
           <div class="grid__item large--one-twelfth medium-down--hide">
           </div>
 
-          <div class="grid__item large--one-eighth menu-gifting">
+          <div class="grid__item large--one-eighth menu-gifting {% if page.url == '/pages/gifting' %}current-gifting{% endif %}">
             <a href="/pages/gifting">
               <div class="land">
-                <img src="//cdn.shopify.com/s/files/1/0941/6562/files/moments_large.png" />
+                <div class="gifting-menu">
+                  <img src="//cdn.shopify.com/s/files/1/0941/6562/files/moments_large.png" />
+                </div>
+                <div class="current-gifting-menu">
+                  <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavFill-Gifting.png?10094935274243229564" />
+                </div>
               </div>
               <div class="hover">
                 <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Gifting.png?9428823851147239333" />
@@ -248,10 +261,15 @@
               Gifts
             </a>
           </div>
-          <div class="grid__item large--one-eighth menu-celebrate">
+          <div class="grid__item large--one-eighth menu-celebrate {% if page.url == '/pages/celebrate' %}current-celebrate{% endif %}">
             <a href="/pages/celebrate">
               <div class="land">
-                <img src="//cdn.shopify.com/s/files/1/0941/6562/files/gifting_large.png" />
+                <div class="celebrate-menu">
+                  <img src="//cdn.shopify.com/s/files/1/0941/6562/files/gifting_large.png" />
+                </div>
+                <div class="current-celebrate-menu">
+                  <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavFill-Celebrate.png?10094935274243229564" />
+                </div>
               </div>
               <div class="hover">
                 <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Celebrate.png?9428823851147239333" />
@@ -290,10 +308,15 @@
             </a>
           </div>
 
-          <div class="grid__item large--one-eighth menu-moments">
+          <div class="grid__item large--one-eighth menu-moments {% if page.url == '/pages/moments' %}current-moments{% endif %}">
             <a href="/pages/moments">
               <div class="land">
-                <img src="//cdn.shopify.com/s/files/1/0941/6562/files/celebrate_large.png" />
+                <div class="moments-menu">
+                  <img src="//cdn.shopify.com/s/files/1/0941/6562/files/celebrate_large.png" />
+                </div>
+                <div class="current-moments-menu">
+                  <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavFill-Moments.png?10094935274243229564" />
+                </div>
               </div>
               <div class="hover">
                 <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Moments.png?9428823851147239333" />
@@ -301,10 +324,15 @@
               Moments
             </a>
           </div>
-          <div class="grid__item large--one-eighth menu-about">
+          <div class="grid__item large--one-eighth menu-about {% if page.url == '/pages/about' %}current-about{% endif %}">
             <a href="/pages/about">
               <div class="land">
-                <img src="//cdn.shopify.com/s/files/1/0941/6562/files/about_large.png" />
+                <div class="about-menu">
+                  <img src="//cdn.shopify.com/s/files/1/0941/6562/files/about_large.png" />
+                </div>
+                <div class="current-about-menu">
+                  <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavFIll-Bkln.png?10094935274243229564" />
+                </div>
               </div>
               <div class="hover">
                 <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Bkln.png?9428823851147239333" />
