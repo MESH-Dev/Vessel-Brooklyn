@@ -2593,7 +2593,7 @@ label.error {
   }
 }
 
-.index-banner-home-text {
+.index-banner-text {
   color: white;
   text-transform: uppercase;
   font-size: 14px;
@@ -2832,6 +2832,10 @@ label.error {
   @include at-query ($max, $medium) {
     width: 100%;
   }
+
+  -webkit-clip-path: polygon(50% 25%, 98% 50%, 50% 75%, 2% 50%);
+  clip-path: polygon(50% 15%, 100% 50%, 50% 100%, 0% 50%);
+
 }
 
 .callout-text-right-big .callout-right {
@@ -2843,7 +2847,7 @@ label.error {
 }
 
 .callout-text-right .callout-right {
-  padding: 0 100px;
+  padding: 100px;
 
   @include at-query ($max, $medium) {
     padding: 0 50px;
@@ -3171,4 +3175,8 @@ label.error {
     height: 489px;
     width: 214px;
   }
+}
+
+.index-banner-gifting-text, .index-banner-celebrations-text, .index-banner-moments-text, .index-banner-about-text {
+  display: none;
 }
