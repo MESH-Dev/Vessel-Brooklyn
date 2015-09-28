@@ -2578,6 +2578,8 @@ label.error {
 	-webkit-transform: translate3d(-50px,0, 0);
 	transform: translate3d(-50px,0,0);
 
+  opacity: 1;
+
 }
 
 .menu-gifting-hover {
@@ -2729,10 +2731,16 @@ label.error {
   }
 
   &::after {
-    content: url('https://cdn.shopify.com/s/files/1/0941/6562/files/down.png?13794223078402856740');
+    content: url('https://cdn.shopify.com/s/files/1/0941/6562/files/CTA-passive_67a48123-22a5-457d-986f-96ccce110526.png?9701746310041990914');
     position: relative;
     right: -5px;
     bottom: -3px;
+  }
+
+  &:hover {
+    &::after {
+      content: url('https://cdn.shopify.com/s/files/1/0941/6562/files/CTA-active_f3f56d0e-04fb-4bec-b0f1-d511fc354df3.png?9701746310041990914');
+    }
   }
 }
 
@@ -3233,15 +3241,6 @@ label.error {
   }
 }
 
-.index-logo-about {
-  img {
-    width: 214px;
-
-    @include at-query ($max, $desktop-width) {
-      width: 13%;
-    }
-  }
-}
 
 .current-gifting, .current-celebrate, .current-moments, .current-about {
   a {
