@@ -2623,7 +2623,7 @@ label.error {
   top: 0;
   left: 40%;
 
-  @include at-query ($max, $small) {
+  @include at-query ($max, $medium) {
     display: none;
   }
 }
@@ -2631,12 +2631,28 @@ label.error {
 .index-mobile-home {
   padding-top: 90px;
   text-align: center;
+  position: absolute;
+  left: 28%;
+  top: 0;
 
   img {
     width: 85%;
   }
 
-  @include at-query ($min, $small) {
+  @include at-query ($max, $small) {
+    left: 0;
+  }
+
+  @include at-query ($max, $medium) {
+    left: 10%;
+  }
+
+  @include at-query ($max, $large) {
+    left: 25%;
+  }
+
+
+  @include at-query ($min, $medium) {
     display: none;
   }
 }
@@ -3238,6 +3254,10 @@ label.error {
 .index-logo-home {
   img {
     width: 214px;
+  }
+
+  @include at-query ($max, $medium) {
+    width: 100px;
   }
 }
 

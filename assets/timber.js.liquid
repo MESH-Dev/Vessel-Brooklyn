@@ -551,6 +551,11 @@ $(document).ready(function() {
 
   $('.index-banner').css('height', h - 170);
 
+  if (h < 900) {
+    $('.index-banner-home').hide();
+    $('.index-mobile-home').show();
+  }
+
   // $('.index-banner').parallax("center", 0.1);
 
 
