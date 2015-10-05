@@ -5,7 +5,23 @@
 
   <div class="grid__item large--five-twelfths" style="background: url({{ image1 }}); background-repeat: no-repeat; background-size: cover; background-position: center;">
     <div class="products-image">
-      <img src="//cdn.shopify.com/s/files/1/0941/6562/files/diamond_large.png" />
+
+      {% if page.url == '/pages/gifting' %}
+        <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/BlueVBLogos-Gifts.png?7111495429789243740" />
+      {% endif %}
+
+      {% if page.url == '/pages/celebrate' %}
+        <img src="//cdn.shopify.com/s/files/1/0941/6562/files/diamond_large.png" />
+      {% endif %}
+
+      {% if page.url == '/pages/moments' %}
+        <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/BlueVBLogos-Moments.png?7111495429789243740" />
+      {% endif %}
+
+      {% if page.url == '/pages/about' %}
+        <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/BlueVBLogos-bkln.png?7111495429789243740" />
+      {% endif %}
+
     </div>
   </div>
 
@@ -18,9 +34,9 @@
     <div class="products-description">
       <p>{{ description }}</p>
     </div>
-    <div class="products-cta">
-      <a href="{{ url }}">{{ cta }}</a>
-    </div>
+
+    <a href="{{ url }}"><div class="products-cta">{{ cta }}</div></a>
+
   </div>
 
 </div>

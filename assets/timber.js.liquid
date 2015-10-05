@@ -547,6 +547,23 @@ $(document).ready(function() {
 
 	}
 
+  $(window).scroll(function() {
+
+    $('.site-header').css('padding', '15px 0');
+    $('.site-header').css('height', '110px');
+    $('.menu-items img').css('margin', '0 auto');
+    $('.title-menu').css('display', 'none');
+
+    $('.main-content').css('margin-top', '110px');
+
+    $('.template-index .main-content').css('margin-top', '10px');
+
+    $('.site-header__logo img').css('height', '75px');
+
+    $('.menu-items .mobile img').css('height', '80px');
+
+  });
+
   var h = $(window).height();
 
   $('.index-banner').css('height', h - 170);

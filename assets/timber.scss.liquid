@@ -2639,16 +2639,12 @@ label.error {
     width: 85%;
   }
 
-  @include at-query ($max, $small) {
-    left: 0;
-  }
-
   @include at-query ($max, $medium) {
     left: 10%;
   }
 
-  @include at-query ($max, $large) {
-    left: 25%;
+  @include at-query ($max, $small) {
+    left: 0;
   }
 
 
@@ -2722,6 +2718,10 @@ label.error {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
+
+    img {
+      width: 194px;
+    }
   }
 }
 
@@ -2737,14 +2737,13 @@ label.error {
 
 
 .products-cta {
-  a {
-    font-size: 14px;
-    line-height: 22px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #07dfd7;
-    font-family: neutratextbold;
-  }
+
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #07dfd7;
+  font-family: neutratextbold;
 
   &::after {
     content: url('https://cdn.shopify.com/s/files/1/0941/6562/files/CTA-passive_67a48123-22a5-457d-986f-96ccce110526.png?9701746310041990914');
@@ -3050,6 +3049,10 @@ label.error {
 
 .product {
   height: 850px;
+
+  @include at-query ($max, $desktop-width) {
+    height: 1200px;
+  }
 }
 
 .product-price {

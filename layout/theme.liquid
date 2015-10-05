@@ -250,7 +250,7 @@
           <div class="grid__item large--one-twelfth medium-down--hide">
           </div>
 
-          <div class="grid__item large--one-eighth menu-gifting {% if page.url == '/pages/gifting' %}current-gifting{% endif %}">
+          <div class="grid__item large--one-eighth menu-gifting {% if page.url == '/pages/gifting' %}current-gifting{% endif %} {% if product.price > 0 %}current-gifting{% endif %}">
             <a href="/pages/gifting">
               <div class="land">
                 <div class="gifting-menu">
@@ -263,7 +263,9 @@
               <div class="hover">
                 <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Gifting.png?9428823851147239333" />
               </div>
-              Gifts
+              <div class="title-menu">
+                Gifts
+              </div>
             </a>
           </div>
           <div class="grid__item large--one-eighth menu-celebrate {% if page.url == '/pages/celebrate' %}current-celebrate{% endif %}">
@@ -279,7 +281,9 @@
               <div class="hover">
                 <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Celebrate.png?9428823851147239333" />
               </div>
-              Celebrations
+              <div class="title-menu">
+                Celebrations
+              </div>
             </a>
           </div>
 
@@ -326,7 +330,9 @@
               <div class="hover">
                 <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Moments.png?9428823851147239333" />
               </div>
-              Moments
+              <div class="title-menu">
+                Moments
+              </div>
             </a>
           </div>
           <div class="grid__item large--one-eighth menu-about {% if page.url == '/pages/about' %}current-about{% endif %}">
@@ -342,8 +348,9 @@
               <div class="hover">
                 <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/NavOutlines-Bkln.png?9428823851147239333" />
               </div>
-
-              About
+              <div class="title-menu">
+                About
+              </div>
             </a>
           </div>
 
