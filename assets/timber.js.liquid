@@ -567,11 +567,20 @@ $(document).ready(function() {
 
   var h = $(window).height();
 
+  console.log(h);
+
   $('.index-banner').css('height', h - 170);
 
-  if (h < 900) {
-    $('.index-banner-home').hide();
-    $('.index-mobile-home').show();
+
+
+  if (h >= 750 && h < 850) {
+    $('.index-banner-home img').css('width', 'auto');
+    $('.index-banner-home img').css('height', '400px');
+  }
+
+  if (h < 750) {
+    $('.index-banner-home img').css('width', 'auto');
+    $('.index-banner-home img').css('height', '200px');
   }
 
   // $('.index-banner').parallax("center", 0.1);
