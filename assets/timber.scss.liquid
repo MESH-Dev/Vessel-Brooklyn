@@ -2560,10 +2560,12 @@ label.error {
 /*================ Custom CSS ================*/
 
 .index-banner {
-  background-image: url(//cdn.shopify.com/s/files/1/0941/6562/files/VBK_WebImage_Flowers_2048x2048.jpg);
+  background-image: url(https://cdn.shopify.com/s/files/1/0941/6562/files/blueyucca-banner.jpg?17942319742864139856);
   height: 710px;
   background-repeat: no-repeat;
   position: relative;
+    background-size: cover;
+    background-position: center;
 
   @include at-query ($max, $small) {
     height: 500px;
@@ -2632,19 +2634,11 @@ label.error {
   padding-top: 90px;
   text-align: center;
   position: absolute;
-  left: 28%;
   top: 0;
 
   img {
-    width: 85%;
-  }
-
-  @include at-query ($max, $medium) {
-    left: 10%;
-  }
-
-  @include at-query ($max, $small) {
-    left: 0;
+    width: 100%;
+    padding: 20px;
   }
 
 
