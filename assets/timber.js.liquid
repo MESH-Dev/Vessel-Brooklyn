@@ -621,6 +621,12 @@ $(document).ready(function() {
   });
 
 
+  console.log(window.location.hash);
+
+  if (window.location.hash == '#contact') {
+    $('.contact').fadeIn();
+  }
+
 });
 
 // Initialize Timber's JS on docready
