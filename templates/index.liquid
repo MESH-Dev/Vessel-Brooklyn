@@ -24,7 +24,10 @@
     <div class="moments-description">
       <p>{{ pages['frontpage'].metafields.c_f._home_1_description }}</p>
     </div>
-    <a href="{{ pages['frontpage'].metafields.c_f._home_1_URL }}"><div class="products-cta">{{ pages['frontpage'].metafields.c_f._home_1_CTA }}</div></a>
+
+    {% if pages['frontpage'].metafields.c_f._home_1_CTA %}
+      <a href="{{ pages['frontpage'].metafields.c_f._home_1_URL }}"><div class="products-cta">{{ pages['frontpage'].metafields.c_f._home_1_CTA }}</div></a>
+    {% endif %}
   </div>
 
   <div class="grid__item large--one-half moments-right">
@@ -52,7 +55,9 @@
       <p>{{ pages['frontpage'].metafields.c_f._home_2_description }}</p>
     </div>
 
-    <a href="{{ pages['frontpage'].metafields.c_f._home_2_URL }}"><div class="products-cta">{{ pages['frontpage'].metafields.c_f._home_2_CTA }}</div></a>
+    {% if pages['frontpage'].metafields.c_f._home_2_CTA %}
+      <a href="{{ pages['frontpage'].metafields.c_f._home_2_URL }}"><div class="products-cta">{{ pages['frontpage'].metafields.c_f._home_2_CTA }}</div></a>
+    {% endif %}
 
   </div>
 
@@ -77,7 +82,9 @@
       <p>{{ pages['frontpage'].metafields.c_f._home_3_description }}</p>
     </div>
 
-    <a href="{{ pages['frontpage'].metafields.c_f._home_3_URL }}"><div class="products-cta">{{ pages['frontpage'].metafields.c_f._home_3_CTA }}</div></a>
+    {% if pages['frontpage'].metafields.c_f._home_3_CTA %}
+      <a href="{{ pages['frontpage'].metafields.c_f._home_3_URL }}"><div class="products-cta">{{ pages['frontpage'].metafields.c_f._home_3_CTA }}</div></a>
+    {% endif %}
 
   </div>
 
@@ -99,7 +106,9 @@
       <p>{{ pages['frontpage'].metafields.c_f._home_4_description }}</p>
     </div>
 
-    <a href="{{ pages['frontpage'].metafields.c_f._home_4_URL }}"><div class="products-cta">{{ pages['frontpage'].metafields.c_f._home_4_CTA }}</div></a>
+    {% if pages['frontpage'].metafields.c_f._home_4_CTA %}
+      <a href="{{ pages['frontpage'].metafields.c_f._home_4_URL }}"><div class="products-cta">{{ pages['frontpage'].metafields.c_f._home_4_CTA }}</div></a>
+    {% endif %}
 
   </div>
 

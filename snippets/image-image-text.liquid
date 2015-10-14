@@ -35,7 +35,9 @@
       <p>{{ description }}</p>
     </div>
 
-    <a href="{{ url }}"><div class="products-cta">{{ cta }}</div></a>
+    {% if url %}
+      <a href="{{ url }}"><div class="products-cta">{{ cta }}</div></a>
+    {% endif %}
 
   </div>
 

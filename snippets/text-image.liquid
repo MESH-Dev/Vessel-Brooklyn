@@ -7,7 +7,10 @@
       <p>{{ description }}</p>
     </div>
 
-    <a href="{{ url }}"><div class="products-cta">{{ cta }}</div></a>
+    {% if url %}
+      <a href="{{ url }}"><div class="products-cta">{{ cta }}</div></a>
+    {% endif %}
+    
   </div>
   <div class="grid__item large--one-half text-center">
     <div class="callout-image">

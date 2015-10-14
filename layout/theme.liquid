@@ -49,10 +49,21 @@
         userId: 199721613,
         accessToken: '19403516.22cb2c4.afd9be3b43184423b6fdf34cec830bfa',
         limit: 6,
-        resolution: 'standard_resolution'
+        resolution: 'standard_resolution',
+        after: function() {
+        	external();
+        }
       });
       feed.run();
+
+      function external(){
+        jQuery(document).ready(function($){
+        	$('#instafeed a').attr('target','_blank');
+        });
+      }
     </script>
+
+
 
   {% endif %}
 
@@ -218,7 +229,7 @@
         <div class="index-logo-home index-logo">
           <img src="https://cdn.shopify.com/s/files/1/0941/6562/files/GoldVBLogos-bkln.png?100996462189133030" />
           <div class="index-banner-text index-banner-home-text">
-            Creatively curating personalized Moments, unforgettable Celebrations, and one-of-a-kind Gifts
+            Personalized Moments, unforgettable Celebrations, and one-of-a-kind Gifts
           </div>
         </div>
 
@@ -455,6 +466,11 @@
               </ul>
 
               <ul class="inline-list social-icons">
+
+                <li>
+                  <a href="http://meshfresh.com" target="_blank">Site by MESH</a>
+                </li>
+
                 {% if settings.social_twitter_link != blank %}
                   <li>
                     <a class="icon-fallback-text" href="{{ settings.social_twitter_link }}" title="{{ shop.name }} on Twitter">

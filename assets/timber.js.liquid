@@ -621,7 +621,9 @@ $(document).ready(function() {
   });
 
 
-  console.log(window.location.hash);
+  $(window).on('hashchange',function(){
+    $('.contact').fadeIn();
+  });
 
   if (window.location.hash == '#contact') {
     $('.contact').fadeIn();
