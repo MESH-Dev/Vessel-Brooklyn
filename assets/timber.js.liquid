@@ -633,17 +633,22 @@ $(document).ready(function() {
     $('.frame').css('height', p);
   });
 
-
-  $(window).on('hashchange',function(){
-    $('.contact').fadeIn();
-  });
-
   if (window.location.hash == '#contact') {
     $('.contact').fadeIn();
   }
 
+  $( 'a[href="#contact"]' ).click( function() {
+      $('.contact').fadeIn();
+   } );
+
   var p = $('.product-right').height() + 158;
   $('.frame').css('height', p);
+
+  $(document).keyup(function(e) {
+       if (e.keyCode == 27) { // esc keycode
+         $('.contact').fadeOut();
+       }
+   });
 
 });
 
