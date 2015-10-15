@@ -1105,14 +1105,15 @@ html input[disabled] {
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: $radius;
+  text-transform: uppercase;
 
   /*================ Set primary button colors - can override later ================*/
-  background-color: $colorBtnPrimary;
-  color: $colorBtnPrimaryText;
+  background-color: #1fe2db;
+  color: #07262c;
 
   &:hover {
-    background-color: $colorBtnPrimaryHover;
-    color: $colorBtnPrimaryText;
+    background-color: #07262c;
+    color: #1fe2db;
   }
 
   &:active,
@@ -1805,6 +1806,10 @@ transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   margin: 0;
   max-width: 100%;
   width: 100%;
+
+  transition-property: all;
+transition-duration: .5s;
+transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 
   @include at-query ($min, $large) {
     text-align: center;
@@ -2680,9 +2685,12 @@ transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
     display: block;
     margin: 0 auto 20px;
 
-    transition-property: all;
-transition-duration: .5s;
-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -moz-transition: height 1s ease-in-out, left 1.5s ease-in-out;
+    -webkit-transition: height 1s ease-in-out, left 1.5s ease-in-out;
+    -moz-transition: height 1s ease-in-out, left 1.5s ease-in-out;
+    -o-transition: height 1s ease-in-out, left 1.5s ease-in-out;
+    transition: height 1s ease-in-out, left 1.5s ease-in-out;
+
   }
 
   .grid__item {
@@ -3295,11 +3303,18 @@ transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 .smaller-logo img {
   height: 37px;
   margin-top: 10px;
+
+  -webkit-transition-property: height, width;
+  -webkit-transition-duration: 1s;
+
 }
 
 .header-scrolled {
   padding: 15px 0;
   height: 90px;
+  transition-property: all;
+transition-duration: .5s;
+transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
 .centered {
