@@ -628,6 +628,9 @@ $(document).ready(function() {
     }
 
     $('.index-banner-home').css('left', (w/2) - 150);
+
+    var p = $('.product-right').height() + 158;
+    $('.frame').css('height', p);
   });
 
 
@@ -638,6 +641,9 @@ $(document).ready(function() {
   if (window.location.hash == '#contact') {
     $('.contact').fadeIn();
   }
+
+  var p = $('.product-right').height() + 158;
+  $('.frame').css('height', p);
 
 });
 

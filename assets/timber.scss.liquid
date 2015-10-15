@@ -1779,7 +1779,9 @@ label.error {
   background: white;
   z-index: 10;
 
-
+  transition-property: all;
+transition-duration: .5s;
+transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 
   .grid--table {
     display: table;
@@ -2677,6 +2679,10 @@ label.error {
   img {
     display: block;
     margin: 0 auto 20px;
+
+    transition-property: all;
+transition-duration: .5s;
+transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
   }
 
   .grid__item {
@@ -2891,7 +2897,6 @@ label.error {
 }
 
 .callout-image {
-  width: 600px;
   margin: 0 auto 50px;
 
   @include at-query ($max, $medium) {
@@ -3044,11 +3049,7 @@ label.error {
 }
 
 .product {
-  height: 850px;
 
-  @include at-query ($max, $desktop-width) {
-    height: 1200px;
-  }
 }
 
 .product-price {
@@ -3068,7 +3069,7 @@ label.error {
 }
 
 .product-right {
-  padding: 50px !important;
+  padding: 50px 50px 108px !important;
   background-color: #ffefe7;
   height: 100%;
   position: relative;
