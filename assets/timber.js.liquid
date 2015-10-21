@@ -575,7 +575,6 @@ $(document).ready(function() {
       $('.main-content').removeClass('top-margin');
 
       $scrolled = false;
-
     }
 
   });
@@ -629,8 +628,7 @@ $(document).ready(function() {
 
     $('.index-banner-home').css('left', (w/2) - 150);
 
-    var p = $('.product-right').height() + 158;
-    $('.frame').css('height', p);
+    // $('.frame').css('height', $('.product-right').height() + 158);
   });
 
   if (window.location.hash == '#contact') {
@@ -641,8 +639,7 @@ $(document).ready(function() {
       $('.contact').fadeIn();
    } );
 
-  var p = $('.product-right').height() + 158;
-  $('.frame').css('height', p);
+  // $('.frame').css('height', $('.product-right').height() + 158);
 
   $(document).keyup(function(e) {
        if (e.keyCode == 27) { // esc keycode
