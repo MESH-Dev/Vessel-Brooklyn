@@ -535,7 +535,7 @@ $(document).ready(function() {
 
         $('.site-header').css('position', 'fixed');
 
-        $('main').css('margin-top', 170);
+        $('main').css('margin-top', 90);
 
         $('.index-banner-home').hide();
         $('.index-mobile-home').hide();
@@ -571,7 +571,7 @@ $(document).ready(function() {
       $scrolled = true;
     }
 
-    if(!$(window).scrollTop()) {
+    if(!$(window).scrollTop() && $(window).width > 1000) {
 
       $('.site-header__logo').removeClass('smaller-logo');
       $('.site-header').removeClass('header-scrolled');
@@ -591,7 +591,7 @@ $(document).ready(function() {
     $('.menu-items .mobile img').addClass('menu-mobile-height');
     $('.title-menu').addClass('smaller');
 
-    $('.main-content').addClass('top-margin');
+    $('.main-content').removeClass('top-margin');
 
     $scrolled = true;
   }
@@ -599,7 +599,7 @@ $(document).ready(function() {
 
   var h = $(window).height();
 
-  $('.index-banner').css('height', h - 170);
+  $('.index-banner').css('height', h - 90);
 
 
 
@@ -644,6 +644,7 @@ $(document).ready(function() {
   $( 'a[href="#contact"]' ).click( function() {
       $('.contact').fadeIn();
    } );
+
 
 
   console.log($('.product-right').height()+158);
