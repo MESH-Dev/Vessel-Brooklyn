@@ -42,7 +42,7 @@
   {{ '//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js' | script_tag }}
   {{ 'modernizr.min.js' | asset_url | script_tag }}
 
-  {% if template != 'index' %}
+  {% if template != 'index' and template != 'product' %}
     {{ 'instafeed.min.js' | asset_url | script_tag }}
 
     <script type="text/javascript">
@@ -470,7 +470,7 @@
             <div class="grid__item">
               <ul class="inline-list footer-menu">
                 <li>
-                  <a href="">Press</a>
+                  <a href="http://vessel-brooklyn-2.myshopify.com/pages/press">Press</a>
                 </li>
                 <li>
                   <a class="get-in-touch" href="#contact">Get in Touch</a>
@@ -493,7 +493,7 @@
                 {% endif %}
                 {% if settings.social_facebook_link != blank %}
                   <li>
-                    <a class="icon-fallback-text" href="{{ settings.social_facebook_link }}" title="{{ shop.name }} on Facebook">
+                    <a class="icon-fallback-text" href="{{ settings.social_facebook_link }}" title="{{ shop.name }} on Facebook" target="_blank">
                       <span class="icon icon-facebook" aria-hidden="true"></span>
                       <span class="fallback-text">Facebook</span>
                     </a>
@@ -508,7 +508,7 @@
 
   </div>
 
-  
+
 
   {{ 'fastclick.min.js' | asset_url | script_tag }}
   {{ 'timber.js' | asset_url | script_tag }}
@@ -559,6 +559,8 @@
 
   <script type="text/javascript">
 
+    $('.frame').css('height', $('.product-right').height() + 158);
+
     var $frame = $('#nonitembased');
     var $wrap  = $frame.parent();
 
@@ -566,6 +568,9 @@
       speed: 300,
 			activatePageOn: 'click',
 			scrollBy: 100,
+      mouseDragging: 1,
+			touchDragging: 1,
+			releaseSwing: 1,
 			dragHandle: 1,
 			dynamicHandle: 1,
 			clickBar: 1
